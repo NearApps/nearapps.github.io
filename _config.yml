@@ -38,6 +38,9 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
 staticman:
   allowedFields          : # ['name', 'email', 'url', 'message']
   branch                 : # "master"
@@ -55,8 +58,8 @@ staticman:
       options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 reCaptcha:
-  siteKey                :
-  secret                 :
+  siteKey                : "6LeBB4gfAAAAAD8RR1KwOTHHns5BtCUksNdEOEnq"
+  secret                 : "6LeBB4gfAAAAADmQMNmT3h7PUpQV6YhHmjVKF8GJ"
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : # true, false (default)
@@ -290,5 +293,5 @@ defaults:
       author_profile: true
       read_time: false
       comments: false
-      share: false
+      share: true
       related: true
