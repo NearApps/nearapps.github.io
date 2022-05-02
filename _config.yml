@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "Carlos Dev"
-  avatar           : "/assets/images/avatar.jpg"
+  avatar           : "/assets/images/avatar.png"
   bio              : "Mobile Developer"
   location         : "Peru - Ica"
   email            : "carlos.alarcon.dev@gmail.com"
