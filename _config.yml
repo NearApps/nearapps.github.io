@@ -10,25 +10,27 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes@4.15.1"
-minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "haxor"
+theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
 
 # Site Settings
 locale                   : "es-PE"
 title                    : "NearApps"
 title_separator          : "-"
-name                     : "Near"
-description              : "Posts about security, CTFs and networking"
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "NearDev"
+description              : "Mobile and Web Developer"
 url                      : "https://nearapps.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "NearApps/nearapps.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-logo                     : "/assets/images/masthead.png"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : "/assets/images/masthead.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : false # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -39,33 +41,29 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-      theme                : # "github-light" (default), "github-dark"
-      issue_term           : # "pathname" (default)
-      label                : # "Bot" (default)
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
+  giscus:
+    repo_id              : # Shown during giscus setup at https://giscus.app
+    category_name        : # Full text name of the category
+    category_id          : # Shown during giscus setup at https://giscus.app
+    discussion_term      : # "pathname" (default), "url", "title", "og:title"
+    reactions_enabled    : # '1' for enabled (default), '0' for disabled
+    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
   staticman:
-    allowedFields          : # ['name', 'email', 'url', 'message']
-    branch                 : # "master"
-    commitMessage          : # "New comment."
-    filename               : # comment-{@timestamp}
-    format                 : # "yml"
-    moderation             : # true
-    path                   : # "/_data/comments/{options.slug}" (default)
-    requiredFields         : # ['name', 'email', 'message']
-    transforms:
-      email                : # "md5"
-    generatedFields:
-      date:
-        type               : # "date"
-        options:
-          format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
-  siteKey                : #"6LeBB4gfAAAAAD8RR1KwOTHHns5BtCUksNdEOEnq"
-  secret                 : #"6LeBB4gfAAAAADmQMNmT3h7PUpQV6YhHmjVKF8GJ"
+  siteKey                :
+  secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
+  hide                   : # true, false (default)
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
+lunr:
+  search_within_pages    : # true, false (default)
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -77,8 +75,9 @@ google:
 # SEO Related
 google_site_verification :
 bing_site_verification   :
-yandex_site_verification :
 naver_site_verification  :
+yandex_site_verification :
+baidu_site_verification  :
 
 # Social Sharing
 twitter:
@@ -97,33 +96,29 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "G-3QPRY6Z2Y0"
-    anonymize_ip         : false # (default)
+    anonymize_ip         : false # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Carlos Dev"
-  avatar           : "/assets/images/avatar.png"
-  bio              : "Mobile Developer"
+  name             : "JCarlos"
+  avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Mobile y Web Dev"
   location         : "Perú"
   email            : "carlos.alarcon.dev@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
   codepen          :
-  dribbble         :
   flickr           :
   facebook         :
-  foursquare       :
   github           : "NearApps"
   gitlab           :
   google_plus      :
-  keybase          :
   instagram        :
-  lastfm           :
   linkedin         : "juan-carlos-b241b8a4" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
@@ -131,11 +126,7 @@ author:
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
   twitter          :
-  vine             :
-  weibo            :
-  xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-
 
 # Site Footer
 footer:
@@ -148,7 +139,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/NearApps"
+      url:  "https://github.com/NearApps"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -158,6 +149,7 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+
 
 # Reading Files
 include:
@@ -184,6 +176,7 @@ exclude:
   - log
   - node_modules
   - package.json
+  - package-lock.json
   - Rakefile
   - README
   - tmp
@@ -215,15 +208,16 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
-permalink: /:title/
-paginate: 10 # amount of posts to show
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Bogota # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -234,7 +228,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
@@ -243,7 +236,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
+  - jekyll-include-cache
 
 
 # Archives
@@ -254,8 +247,8 @@ whitelist:
 #  - Archive page should exist at path when using Liquid method or you can
 #    expect broken links (especially with breadcrumbs enabled)
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
@@ -276,7 +269,7 @@ tag_archive:
 
 
 # HTML Compression
-# - http://jch.penibelst.de/
+# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
@@ -292,7 +285,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
-      comments: false
+      read_time: true
+      comments: true
       share: true
       related: true

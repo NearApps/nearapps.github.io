@@ -19,8 +19,9 @@ const search = instantsearch({
 
 const hitTemplate = function(hit) {
   const url = hit.url;
-  const title = hit._highlightResult.title.value;
-  const content = hit._highlightResult.html.value;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
 
   return `
     <div class="list__item">
@@ -37,18 +38,25 @@ search.addWidget(
   instantsearch.widgets.searchBox({
     container: '.search-searchbar',
     {% unless site.algolia.powered_by == false %}poweredBy: true,{% endunless %}
-    placeholder: '{{ site.data.ui-text[site.locale].search_placeholder_text | default: "Introduzca su término de búsqueda..." }}'
+    placeholder: '{{ site.data.ui-text[site.locale].search_placeholder_text | default: "Enter your search term..." }}'
   })
 );
 search.addWidget(
   instantsearch.widgets.hits({
     container: '.search-hits',
     templates: {
-      item: hitTemplate
+      item: hitTemplate,
+      empty: '{{ site.data.ui-text[site.locale].search_algolia_no_results | default: "No results" }}',
     }
   })
 );
 
-// Starting the search
-search.start();
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
 </script>
