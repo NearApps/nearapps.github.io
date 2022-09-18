@@ -100,7 +100,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
-  jekyll-feed (~> 0.6)
   jekyll-include-cache
   minimal-mistakes-jekyll!
   rake (>= 12.3.3)
