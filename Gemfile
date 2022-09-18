@@ -14,7 +14,7 @@ gemspec
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 #gem "minima", "~> 2.0"
 
-gem "jekyll-include-cache", group: :jekyll_plugins
+#gem "jekyll-include-cache", group: :jekyll_plugins
 gem "webrick", "~> 1.7"
 
 # To upgrade, run `bundle update`.
@@ -35,6 +35,13 @@ gem "webrick", "~> 1.7"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   #gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+  gem "jekyll-include-cache"
+  gem "jekyll-archives"
+  #gem "jekyll-algolia"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
