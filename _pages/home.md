@@ -8,7 +8,7 @@ header:
   overlay_filter: "0.5"
   overlay_image: assets/images/banner.jpg
   actions:
-    - label: "Contacta conmigo"
+    - label: "Contactate conmigo"
       url: "/contacts/"
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 excerpt: 'Innovación Excepcional en Tecnologías móviles, web y emergentes.'
@@ -26,7 +26,7 @@ feature_row:
 - image_path: /assets/images/marca/product3.png
   alt: "ecosistema funcionales"
   title: "Ecosistema Funcionales"
-  excerpt: 'Se brinda asesoramiento a proyectos multiplataformas que requieran integraciones de equipos extra (Impresoras térmicas, Lectores, Fingerprint) para soluciones a medida. <small><a href="./services/">Ver más.</a></small>'
+  excerpt: 'Se brinda asesoramiento a proyectos multiplataformas que requieran añadir integraciones de equipos extra (Impresoras térmicas, Lectores, Fingerprint) para soluciones a medida. <small><a href="./services/">Ver más.</a></small>'
 feature_row2:
 - image_path: /assets/images/home/working.jpg
   alt: "working projects"
