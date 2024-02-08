@@ -1,6 +1,6 @@
 ---
 title: "Sobre mí"
-permalink: /about/
+permalink: /privacy_policy/
 date: 2022-10-24
 excerpt: "Acerca de mi"
 ---
